@@ -7,18 +7,29 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'extends-components-abstract';
-  data = {
-    title: 'adrian',
-    paragraph: "loreasdfas adf asdf asdf asdf asdfasfasd"
+  ztviewer = {
+    title: 'zt-viewer-accordion - click me!!!',
+    paragraph: 'Componente Base .Con la funcionalidad de mostrar una descripcion,' +
+      ' este elemento reacciona por defecto con un click en el titulo',
   };
 
-  data1 = {
-    title: 'walter sdf asdf asdfasd',
-    paragraph: "loreasdfas adf asdf asdf asdf asdfasfasd"
+  button = {
+    title: 'app-viewer-button - click en el Button',
+    paragraph: 'Extiende comportamiento del Componente Base (zt-viewer-accordion) y modifica el flujo' +
+      'de mostrar la información, asiendo que solo al hacer click en el button muestre la información' +
+      'y anula la acción de mostrar la descripción al hacer click en el Título.'
   };
 
-  data2 = {
-    title: 'chicho chicho',
-    paragraph: "aaasfasdfasd asdf asdf asdf asdf asdf asdf"
+  popup = {
+    title: 'app-viewer-popup - click me!!!',
+    paragraph: 'Extiende comportamiento del Componente Base (zt-viewer-accordion) y modifica el flujo' +
+      'de mostrar la información, asiendo en el Título muestra la información en un alert.'
+  };
+
+  hover = {
+    title: 'app-viewer-hover - mouse enter!!!',
+    paragraph: 'Extiende comportamiento del Componente Base (zt-viewer-accordion) y modifica el flujo' +
+      'de mostrar la información, cuando el mouse se encuentra sobre este componente se mostrara la ' +
+      'descripción y cuando el mouse sale del componente la descripción se ocultara.'
   };
 }

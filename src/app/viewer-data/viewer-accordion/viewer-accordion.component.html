@@ -1,11 +1,8 @@
-<!--<div>-->
-  <!--<div (click)="clickItem()">{{data.title}}</div>-->
-  <!--<div class="container-paragraph" *ngIf="showContent$ | async">-->
-    <!--<p>{{data.paragraph}}</p>-->
-  <!--</div>-->
-<!--</div>-->
+
 <div class="card">
-  <div class="card-header" (click)="clickItem()">{{data.title}}</div>
+  <div class="card-header" (click)="clickItem()">
+    <b>{{data.title}}</b>
+  </div>
   <div class="card-body" *ngIf="showContent$ | async">
     <p class="card-text">{{data.paragraph}}</p>
   </div>

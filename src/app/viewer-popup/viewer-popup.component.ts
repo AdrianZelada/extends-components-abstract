@@ -27,7 +27,7 @@ export class ViewerPopupComponent extends ViewerAccordionAbstract implements OnI
   }
 
   deferClick() {
-    alert(this.data.title);
+    alert(this.data.paragraph);
   }
 
 }

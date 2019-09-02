@@ -24,8 +24,6 @@ export abstract class ViewerAccordionAbstract implements ViewerInterface{
 
 
 export interface ViewerInterface {
-  // @Output() click
-  // openEvent: BehaviorSubject<any>;
   openEvent$: Observable<any>;
   openBlock(): void;
   closeBlock(): void;
