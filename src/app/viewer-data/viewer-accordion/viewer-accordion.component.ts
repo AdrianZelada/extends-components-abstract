@@ -1,4 +1,4 @@
-import {Component, forwardRef, Inject, InjectionToken, Input, OnInit, Optional} from '@angular/core';
+import {Component, Input, OnInit, Optional} from '@angular/core';
 import {ViewerAccordionAbstract, ViewerInterface} from '../domains/viewer-accordion.abstract';
 import {ViewerAccordionDefaultService} from '../services/viewer-accordion-default.service';
 import {Observable} from 'rxjs';
@@ -13,7 +13,7 @@ export class ViewerAccordionComponent implements OnInit {
   @Input() data: any = {};
 
   showContent$: Observable<any>;
-  viewProvider: ViewerInterface;
+  viewProvider: ViewerAccordionAbstract;
 
   constructor( @Optional() private cpnService: ViewerAccordionAbstract,
                private defaultControlValueService: ViewerAccordionDefaultService) {
@@ -31,7 +31,7 @@ export class ViewerAccordionComponent implements OnInit {
     }
   }
 
-  getProvider(): ViewerInterface {
+  getProvider(): ViewerAccordionAbstract {
     return this.cpnService || this.defaultControlValueService;
   }
 

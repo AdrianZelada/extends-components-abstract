@@ -34,4 +34,7 @@ export class ViewerHoverComponent extends ViewerAccordionAbstract implements OnI
     return false;
   }
 
+  deferClick() {
+  }
+
 }

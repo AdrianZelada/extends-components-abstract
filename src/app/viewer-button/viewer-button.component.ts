@@ -30,4 +30,7 @@ export class ViewerButtonComponent extends ViewerAccordionAbstract implements On
     return false;
   }
 
+  deferClick() {
+  }
+
 }

@@ -9,4 +9,11 @@ export class ViewerAccordionDefaultService extends ViewerAccordionAbstract {
   constructor() {
     super();
   }
+
+  deferClick() {
+  }
+
+  validOpen(): boolean {
+    return true;
+  }
 }
