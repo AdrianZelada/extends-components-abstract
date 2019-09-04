@@ -32,4 +32,11 @@ export class AppComponent {
       'de mostrar la información, cuando el mouse se encuentra sobre este componente se mostrara la ' +
       'descripción y cuando el mouse sale del componente la descripción se ocultara.'
   };
+
+  secret = {
+    title: 'app-viewer-secret - ingresa la palabra secreta y hazme click!!!',
+    paragraph: 'Extiende comportamiento del Componente Base (zt-viewer-accordion) y modifica el flujo' +
+      'de mostrar la información, valida si la palabra ingresada es la clave para mostrar si lo es  muestra' +
+      'la información en caso contrario muestra un mensaje de error'
+  };
 }

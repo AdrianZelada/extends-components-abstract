@@ -6,17 +6,21 @@ import {ViewerDataModule} from './viewer-data/viewer-data.module';
 import { ViewerPopupComponent } from './viewer-popup/viewer-popup.component';
 import { ViewerButtonComponent } from './viewer-button/viewer-button.component';
 import { ViewerHoverComponent } from './viewer-hover/viewer-hover.component';
+import { ViewerSecretComponent } from './viewer-secret/viewer-secret.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewerPopupComponent,
     ViewerButtonComponent,
-    ViewerHoverComponent
+    ViewerHoverComponent,
+    ViewerSecretComponent
   ],
   imports: [
     BrowserModule,
-    ViewerDataModule
+    ViewerDataModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
