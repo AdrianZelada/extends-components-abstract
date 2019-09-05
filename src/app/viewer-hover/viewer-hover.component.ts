@@ -3,7 +3,11 @@ import {ViewerAccordionAbstract} from '../viewer-data/domains/viewer-accordion.a
 
 @Component({
   selector: 'app-viewer-hover',
-  templateUrl: './viewer-hover.component.html',
+  template: `<div class="row">
+                <div class="col-12 ">
+                  <zt-viewer-accordion [data]="data"></zt-viewer-accordion>
+                </div>
+              </div>`,
   styleUrls: ['./viewer-hover.component.scss'],
   viewProviders: [
     {
@@ -14,6 +18,15 @@ import {ViewerAccordionAbstract} from '../viewer-data/domains/viewer-accordion.a
 })
 export class ViewerHoverComponent extends ViewerAccordionAbstract implements OnInit {
   @Input() data: any = {};
+
+  /**
+   * Escuchamos los eventos del mouse en nuestro component y segun ejecutamos
+   * la funcion que corresponda al evento que se dispara.
+   *
+   * mouseenter : Muestra la Información.
+   *
+   * mouseleave : Oculta la Información.
+   * */
   @HostListener('mouseenter', ['$event.target'])
   onEnter() {
     this.openBlock();
@@ -30,6 +43,9 @@ export class ViewerHoverComponent extends ViewerAccordionAbstract implements OnI
   ngOnInit() {
   }
 
+  /**
+   * Modificamos la funcionalidad para no mostrar la información haciendo click en el título.
+   */
   validOpen() {
     return false;
   }

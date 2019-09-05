@@ -4,13 +4,7 @@ import {ViewerAccordionDefaultService} from '../services/viewer-accordion-defaul
 import {Observable} from 'rxjs';
 
 /**
- * ViewerAccordionComponent
- * Component que puede cambiar su funcionalidad si un component HOST provee a este component algun
- * provider de tipo ViewerAccordionAbstract
- *
- * En caso de que no tengamos un provider de parte del component HOST entonces se tomará por defecto
- * el provider ViewerAccordionDefaultService que hara que el component actue de manera normal
- *
+ * ViewerAccordionComponent*
  *
  */
 @Component({
@@ -30,6 +24,16 @@ export class ViewerAccordionComponent implements OnInit {
    * variable que tendra el provider que se utilizará
    */
   viewProvider: ViewerAccordionAbstract;
+
+  /**
+   *
+   * Component que puede cambiar su funcionalidad si un component HOST provee a este component algun
+   * provider de tipo ViewerAccordionAbstract
+   *
+   * En caso de que no tengamos un provider de parte del component HOST entonces se tomará por defecto
+   * el provider ViewerAccordionDefaultService que hara que el component actue de manera normal
+   *
+   */
 
   constructor( @Optional() private cpnService: ViewerAccordionAbstract,
                private defaultControlValueService: ViewerAccordionDefaultService) {
