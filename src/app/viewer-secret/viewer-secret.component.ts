@@ -24,9 +24,18 @@ export class ViewerSecretComponent extends ViewerAccordionAbstract implements On
   ngOnInit(): void {
   }
 
+  /**
+   *  Comparamos el valor proporcionado por el cliente con la clave del component
+   */
+
   validOpen() {
     return this.secret == this.key;
   }
+
+  /**
+   * Si el valor no es igual a la clave del component, se ejecutará deferClick que mostrará un
+   * mensaje de error .
+   */
 
   deferClick() {
     this.showError = true;

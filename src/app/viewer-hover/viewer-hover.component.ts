@@ -3,11 +3,7 @@ import {ViewerAccordionAbstract} from '../viewer-data/domains/viewer-accordion.a
 
 @Component({
   selector: 'app-viewer-hover',
-  template: `<div class="row">
-                <div class="col-12 ">
-                  <zt-viewer-accordion [data]="data"></zt-viewer-accordion>
-                </div>
-              </div>`,
+  templateUrl: './viewer-hover.component.html',
   styleUrls: ['./viewer-hover.component.scss'],
   viewProviders: [
     {
